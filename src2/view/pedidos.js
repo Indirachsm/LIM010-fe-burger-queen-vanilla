@@ -22,9 +22,7 @@ export default () => {
 
     btnName.addEventListener('click', () => {
       const productoSeleccionado = doc.data();
-      const copiaObj = Object.assign({}, productoSeleccionado);
-      console.log(copiaObj);
-      
+      const copiaObj = Object.assign({}, productoSeleccionado); 
       copiaObj.id = doc.id;
       copiaObj.cantidad = 1;
 
@@ -34,7 +32,7 @@ export default () => {
       } else {
         arrPedidos.push(copiaObj);
       };
-      console.log(arrPedidos);
+      // console.log(arrPedidos);
      let areaPedidos = divElemt.querySelector('#area-pedidos');   
      areaPedidos.classList.remove('hide');
      pintarArray(arrPedidos, areaPedidos);
