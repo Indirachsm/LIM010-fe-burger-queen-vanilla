@@ -67,5 +67,7 @@ const crearObjeto = (array, input, total) => {
     console.log(objOrdenes);
     firebase.firestore().collection('ordenes').add({
         objOrdenes
-    });
+    }).then((array) => {
+        alert("holi");
+    })
 }
